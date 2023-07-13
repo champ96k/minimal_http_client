@@ -24,7 +24,7 @@ dependencies:
 ### How to use `minimal_http_client`
 
 
-1. At your app start-up initialize below `DioHttpService`
+1. At your app start-up initialize below `DioHttpService` or you can also add into your `dependency injection`
 
 
 ```dart
@@ -37,6 +37,49 @@ dependencies:
       );
       await DioHttpService().init(authInterceptor: authInterceptor);
 ```
+
+2. How to used in `repository`
+
+
+```dart
+
+
+class YourRepositoryName {
+  YourRepositoryName({required this.httpService});
+
+  /// HttpService is a dependency injection for making HTTP requests
+  final HttpService httpService;
+
+  ///Function for getting the list of fantasy matches
+  Future<YourModelClass> fetchData() async {
+    try {
+      
+      /// URL for the list of fantasy matches
+      final path = '${yourBaseURL}get/news/1';
+
+      /// Send a GET request to the specified URL with authorization and auth headers
+      final _response = await httpService.handleGetRequest(path);
+
+      /// If the response status code is between 200 and 300, parse the response data into a YourModelClass and return it
+      if (_response.statusCode! >= 200 && _response.statusCode! <= 300) {
+        final _result = YourModelClass.fromJson(_response.data);
+        return _result;
+      }
+    }
+    /// Catch DioError and throw a to your Custom error with the error message
+    on DioError catch (e) {
+      final _message = e.response?.data?['message'] ?? '';
+      throw _message;
+    }
+    /// Catch all other exceptions and throw a CustomError with the error message
+    catch (e) {
+      throw '$e';
+    }
+  }
+}
+```
+
+
 
 
 ### Created & Maintained By
