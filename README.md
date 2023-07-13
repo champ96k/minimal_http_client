@@ -1,6 +1,6 @@
 # Minimal HTTP Client 
 
-A Dart package based on Dio that provides minimal http client to handle HTTP services requests. A minimal http client libaray for network call 
+A Dart package based on Dio that provides minimal http client to handle HTTP services requests. A minimal http client library for network call 
 
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues-raw/champ96k/minimal_http_client)
 
