@@ -1,6 +1,6 @@
 name: minimal_http_client
 description: A Dart package based on Dio that provides minimal http client to handle HTTP services requests. A minimal http client library for network call 
-version: 0.0.2
+version: 0.0.3
 
 homepage: https://github.com/champ96k/minimal_http_client
 

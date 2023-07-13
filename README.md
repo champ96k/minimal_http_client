@@ -18,7 +18,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  minimal_http_client: ^0.0.2
+  minimal_http_client: ^0.0.3
 ```
 
 ### How to use `minimal_http_client`
