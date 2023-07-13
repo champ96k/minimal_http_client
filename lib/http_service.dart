@@ -1,4 +1,4 @@
-library http_service;
+library minimal_http_client;
 
 import 'package:dio/dio.dart';
 export 'dio_http_service.dart';

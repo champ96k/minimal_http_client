@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:http_service/http_service.dart';
+import 'package:minimal_http_client/http_service.dart';
 
 void main() {
   test('Minimal HTTP client example', () async {

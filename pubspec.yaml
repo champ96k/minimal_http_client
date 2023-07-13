@@ -1,6 +1,6 @@
-name: http_service
-description: A minimal http client libaray for network call
-version: 0.0.1
+name: minimal_http_client
+description: A Dart package based on Dio that provides minimal http client to handle HTTP services requests. A minimal http client libaray for network call 
+version: 0.0.2
 
 homepage: https://github.com/champ96k/minimal_http_client
 

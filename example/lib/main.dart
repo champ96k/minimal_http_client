@@ -1,5 +1,5 @@
-import 'package:http_service/http_service.dart';
 import 'package:flutter/material.dart';
+import 'package:minimal_http_client/http_service.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,9 +31,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final dioHttpService = DioHttpService();
-  String? authToken;
-
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
@@ -44,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
           'seassion_key': 'my_seassion_key',
         },
       );
-      await dioHttpService.init(authInterceptor: authInterceptor);
+      await DioHttpService().init(authInterceptor: authInterceptor);
     });
     super.initState();
   }
