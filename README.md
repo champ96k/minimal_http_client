@@ -30,8 +30,7 @@ dependencies:
 ```dart
     final authInterceptor = AuthInterceptor(
         headerCallback: () => {
-          'auth_token':
-              'Bearer ${DateTime.now().minute}: ${DateTime.now().second}',
+          'auth_token':'Bearer your_jwt_token',
           'seassion_key': 'my_seassion_key',
         },
       );
