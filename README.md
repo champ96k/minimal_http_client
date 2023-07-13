@@ -37,8 +37,6 @@ dependencies:
       await DioHttpService().init(authInterceptor: authInterceptor);
 ```
 
-OR
-
 2. How to used in `repository`
 
 
